@@ -1,7 +1,9 @@
 #!flask/bin/python
 from flask import Flask, jsonify, make_response, request, abort
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app, supports_credentials=True)
 
 tasks = [
     {
