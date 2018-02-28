@@ -51,13 +51,9 @@ def get_task(task_id):
 @app.route('/tasks/<int:task_id>', methods=['PUT'])
 def update_task(task_id):
     task = [task for task in tasks if task['id'] == task_id]
-    if len(task) == 0:
+    if not task:
         abort(404)
     if not request.json:
-        abort(400)
-    if 'title' in request.json and type(request.json['title']) != unicode:
-        abort(400)
-    if 'description' in request.json and type(request.json['description']) is not unicode:
         abort(400)
     if 'done' in request.json and type(request.json['done']) is not bool:
         abort(400)
