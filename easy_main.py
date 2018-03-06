@@ -8,14 +8,14 @@ CORS(app, supports_credentials=True)
 tasks = [
     {
         'id': 1,
-        'title': u'Buy groceries',
-        'description': u'Milk, Cheese, Pizza, Fruit, Tylenol',
+        'title': u'Buy coca-cola',
+        'description': u'20:00',
         'done': False
     },
     {
         'id': 2,
-        'title': u'Learn Python',
-        'description': u'Need to find a good Python tutorial on the web',
+        'title': u'Visit HSE',
+        'description': u'22:00',
         'done': False
     }
 ]
